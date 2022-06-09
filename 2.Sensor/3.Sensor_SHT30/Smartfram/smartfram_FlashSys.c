@@ -364,7 +364,7 @@ void FS_FlashDevice_Debug(void)
 	sprintf(buffer_temp, "%d",Sys_DeviceFlashData_MSG.Humidity);
 	APP_PPRINTF("Humidity: %s \n"	,buffer_temp);
 	
-	sprintf(buffer_temp, "%f",Sys_DeviceFlashData_MSG.Sensor_ERROR);
+	sprintf(buffer_temp, "%d",Sys_DeviceFlashData_MSG.Sensor_ERROR);
 	APP_PPRINTF("Sensor_ERROR: %s \n"	,buffer_temp);
 	
 	APP_PPRINTF("ID_Msg: %d \n"			, Sys_DeviceFlashData_MSG.ID_Msg);

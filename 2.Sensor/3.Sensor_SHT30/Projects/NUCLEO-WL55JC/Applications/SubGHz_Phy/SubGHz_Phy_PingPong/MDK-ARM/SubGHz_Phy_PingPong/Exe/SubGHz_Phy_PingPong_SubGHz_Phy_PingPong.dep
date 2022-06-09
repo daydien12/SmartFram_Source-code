@@ -70,7 +70,7 @@ I (..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_uart_ex.h)(0
 I (..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_system.h)(0x5F992BE6)
 I (..\Core\Inc\board_resources.h)(0x621C5B61)
 I (..\Core\Inc\dma.h)(0x61B9C2E4)
-F (../SubGHz_Phy/App/subghz_phy_app.c)(0x629EF2EB)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../SUBGHZ_PHY/App -I ../SUBGHZ_PHY/Target -I ../../../../../../Drivers/STM32WLxx_HAL_Driver/Inc -I ../../../../../../Drivers/BSP/STM32WLxx_Nucleo -I ../../../../../../Drivers/CMSIS/Include -I ../../../../../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -I ../../../../../../Utilities/lpm/tiny_lpm -I ../../../../../../Utilities/misc -I ../../../../../../Utilities/sequencer -I ../../../../../../Utilities/timer -I ../../../../../../Utilities/trace/adv_trace -I ../../../../../../Smartfram-I./RTE/_SubGHz_Phy_PingPong-IC:/Users/nguye/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/nguye/AppData/Local/Arm/Packs/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="536" -D_RTE_ -DCORE_CM4 -DSTM32WL55xx -D_RTE_ -DSTM32WL55xx -DCORE_CM4-o subghz_phy_pingpong/exe/subghz_phy_app.o -MD)
+F (../SubGHz_Phy/App/subghz_phy_app.c)(0x62A18834)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../SUBGHZ_PHY/App -I ../SUBGHZ_PHY/Target -I ../../../../../../Drivers/STM32WLxx_HAL_Driver/Inc -I ../../../../../../Drivers/BSP/STM32WLxx_Nucleo -I ../../../../../../Drivers/CMSIS/Include -I ../../../../../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -I ../../../../../../Utilities/lpm/tiny_lpm -I ../../../../../../Utilities/misc -I ../../../../../../Utilities/sequencer -I ../../../../../../Utilities/timer -I ../../../../../../Utilities/trace/adv_trace -I ../../../../../../Smartfram-I./RTE/_SubGHz_Phy_PingPong-IC:/Users/nguye/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/nguye/AppData/Local/Arm/Packs/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="536" -D_RTE_ -DCORE_CM4 -DSTM32WL55xx -D_RTE_ -DSTM32WL55xx -DCORE_CM4-o subghz_phy_pingpong/exe/subghz_phy_app.o -MD)
 I (..\Core\Inc\platform.h)(0x61B9C2E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\stdbool.h)(0x603515DA)
 I (..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wlxx.h)(0x5F992BE6)
@@ -150,7 +150,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\math.h)(0x603515DA)
 I (..\Core\Inc\i2c.h)(0x61C047A5)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3032,7 +3032,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3113,7 +3113,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3125,7 +3125,7 @@ I (..\..\..\..\..\..\Smartfram\smartfram_Messeger.h)(0x61DAC1E9)
 I (..\..\..\..\..\..\Smartfram\smartfram_FlashSys.h)(0x629EEF41)
 I (..\..\..\..\..\..\Smartfram\smartfram_SensorSHT3x.h)(0x61BB0C28)
 I (..\..\..\..\..\..\Smartfram\smartfram_Battery.h)(0x61C18FB3)
-F (..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c)(0x629EEF41)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../SUBGHZ_PHY/App -I ../SUBGHZ_PHY/Target -I ../../../../../../Drivers/STM32WLxx_HAL_Driver/Inc -I ../../../../../../Drivers/BSP/STM32WLxx_Nucleo -I ../../../../../../Drivers/CMSIS/Include -I ../../../../../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -I ../../../../../../Utilities/lpm/tiny_lpm -I ../../../../../../Utilities/misc -I ../../../../../../Utilities/sequencer -I ../../../../../../Utilities/timer -I ../../../../../../Utilities/trace/adv_trace -I ../../../../../../Smartfram-I./RTE/_SubGHz_Phy_PingPong-IC:/Users/nguye/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/nguye/AppData/Local/Arm/Packs/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="536" -D_RTE_ -DCORE_CM4 -DSTM32WL55xx -D_RTE_ -DSTM32WL55xx -DCORE_CM4-o subghz_phy_pingpong/exe/smartfram_flashsys.o -MD)
+F (..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c)(0x62A1889A)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../SUBGHZ_PHY/App -I ../SUBGHZ_PHY/Target -I ../../../../../../Drivers/STM32WLxx_HAL_Driver/Inc -I ../../../../../../Drivers/BSP/STM32WLxx_Nucleo -I ../../../../../../Drivers/CMSIS/Include -I ../../../../../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -I ../../../../../../Utilities/lpm/tiny_lpm -I ../../../../../../Utilities/misc -I ../../../../../../Utilities/sequencer -I ../../../../../../Utilities/timer -I ../../../../../../Utilities/trace/adv_trace -I ../../../../../../Smartfram-I./RTE/_SubGHz_Phy_PingPong-IC:/Users/nguye/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/nguye/AppData/Local/Arm/Packs/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="536" -D_RTE_ -DCORE_CM4 -DSTM32WL55xx -D_RTE_ -DSTM32WL55xx -DCORE_CM4-o subghz_phy_pingpong/exe/smartfram_flashsys.o -MD)
 I (..\..\..\..\..\..\Smartfram\smartfram_FlashSys.h)(0x629EEF41)
 I (..\..\..\..\..\..\Smartfram\smartfram_SysInit.h)(0x6298AC10)
 I (C:\Keil_v536\ARM\ARMCLANG\include\stdio.h)(0x603515E4)
@@ -3193,7 +3193,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3273,7 +3273,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3353,7 +3353,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3433,7 +3433,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
 I (..\..\..\..\..\..\Smartfram\smartfram_encryptionAES.h)(0x61D695FD)
@@ -3513,7 +3513,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
 I (..\..\..\..\..\..\Smartfram\smartfram_encryptionAES.h)(0x61D695FD)
@@ -3592,7 +3592,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)
@@ -3605,7 +3605,7 @@ I (..\..\..\..\..\..\Smartfram\smartfram_Messeger.h)(0x61DAC1E9)
 I (..\..\..\..\..\..\Smartfram\smartfram_FlashSys.h)(0x629EEF41)
 I (..\..\..\..\..\..\Smartfram\smartfram_SensorSHT3x.h)(0x61BB0C28)
 I (..\..\..\..\..\..\Smartfram\smartfram_Battery.h)(0x61C18FB3)
-F (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)()
+F (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)()
 F (..\..\..\..\..\..\Smartfram\smartfram_SysInit.h)(0x6298AC10)()
 F (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)()
 F (..\..\..\..\..\..\Smartfram\smartfram_Battery.c)(0x6298AA7F)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char-D__MICROLIB -gdwarf-4 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../SUBGHZ_PHY/App -I ../SUBGHZ_PHY/Target -I ../../../../../../Drivers/STM32WLxx_HAL_Driver/Inc -I ../../../../../../Drivers/BSP/STM32WLxx_Nucleo -I ../../../../../../Drivers/CMSIS/Include -I ../../../../../../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy -I ../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -I ../../../../../../Utilities/lpm/tiny_lpm -I ../../../../../../Utilities/misc -I ../../../../../../Utilities/sequencer -I ../../../../../../Utilities/timer -I ../../../../../../Utilities/trace/adv_trace -I ../../../../../../Smartfram-I./RTE/_SubGHz_Phy_PingPong-IC:/Users/nguye/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/nguye/AppData/Local/Arm/Packs/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="536" -D_RTE_ -DCORE_CM4 -DSTM32WL55xx -D_RTE_ -DSTM32WL55xx -DCORE_CM4-o subghz_phy_pingpong/exe/smartfram_battery.o -MD)
@@ -3676,7 +3676,7 @@ I (C:\Keil_v536\ARM\ARMCLANG\include\stdarg.h)(0x603515E4)
 I (C:\Keil_v536\ARM\ARMCLANG\include\string.h)(0x603515E0)
 I (..\SUBGHZ_PHY\App\lora_command.h)(0x61E284E7)
 I (..\..\..\..\..\..\Smartfram\smartfram_GPIO.h)(0x61E281FF)
-I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x629EE124)
+I (..\..\..\..\..\..\Smartfram\smartfram_define.h)(0x62A18888)
 I (..\..\..\..\..\..\Smartfram\smartfram_TimeCount.h)(0x61C96320)
 I (..\..\..\..\..\..\Smartfram\smartfram_config.h)(0x629EE218)
 I (..\..\..\..\..\..\Smartfram\smartfram_structpayload.h)(0x61D697E8)

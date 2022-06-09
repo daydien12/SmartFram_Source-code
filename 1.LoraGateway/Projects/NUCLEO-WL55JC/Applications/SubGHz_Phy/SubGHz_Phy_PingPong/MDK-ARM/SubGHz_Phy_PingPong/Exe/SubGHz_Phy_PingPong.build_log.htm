@@ -3,40 +3,241 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.29.0.0
-Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 1 Admin, 1, LIC=X96CK-Z37WZ-SBDEJ-UWV89-YNS0B-WKAE4
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Bien Bien, Bien, LIC=WHYH9-4N66Z-FW82N-YZ8WC-46UJ0-RGQNA
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
-Toolchain Path:  C:\Keil_v5_36\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.13.1
-Assembler:       Armasm.exe V6.13.1
-Linker/Locator:  ArmLink.exe V6.13.1
-Library Manager: ArmAr.exe V6.13.1
-Hex Converter:   FromElf.exe V6.13.1
-CPU DLL:         SARMCM3.DLL V5.29.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v536\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
-Dialog DLL:      TCM.DLL V1.36.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-C:\Users\Admin\Desktop\CodeSmartFarm\1.LoraGateway\Projects\NUCLEO-WL55JC\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\MDK-ARM\SubGHz_Phy_PingPong.uvprojx
-Project File Date:  01/18/2022
+D:\github\Clover_Smart_Farm\2.Dev_SmartFram\Smart_Fram\2.Getway_Stm32\Projects\NUCLEO-WL55JC\Applications\SubGHz_Phy\SubGHz_Phy_PingPong\MDK-ARM\SubGHz_Phy_PingPong.uvprojx
+Project File Date:  05/25/2022
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.13.1', folder: 'C:\Keil_v5_36\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v536\ARM\ARMCC\Bin'
 Build target 'SubGHz_Phy_PingPong'
-compiling smartfram_JoinNetwork.c...
-compiling smartfram_FlashSys.c...
+compiling app_subghz_phy.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../SubGHz_Phy/App/app_subghz_phy.c: 1 warning, 0 errors
+compiling board_resources.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/board_resources.c: 1 warning, 0 errors
 compiling subghz_phy_app.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../SubGHz_Phy/App/subghz_phy_app.c(221): warning:  #177-D: variable "DataDec"  was declared but never referenced
+    decrypted_t DataDec;
+../SubGHz_Phy/App/subghz_phy_app.c(222): warning:  #177-D: variable "JoinRequetst"  was declared but never referenced
+    joinRequetstMsg_t* JoinRequetst;
+../SubGHz_Phy/App/subghz_phy_app.c(223): warning:  #177-D: variable "JoinConfirm"  was declared but never referenced
+    joinConfirmMsg_t* JoinConfirm;
+../SubGHz_Phy/App/subghz_phy_app.c(373): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i;
+../SubGHz_Phy/App/subghz_phy_app.c: 5 warnings, 0 errors
+compiling main.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/main.c: 1 warning, 0 errors
+compiling dma.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/dma.c: 1 warning, 0 errors
+compiling rtc.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/rtc.c: 1 warning, 0 errors
+compiling stm32wlxx_hal_msp.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/stm32wlxx_hal_msp.c: 1 warning, 0 errors
+compiling stm32_lpm_if.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/stm32_lpm_if.c: 1 warning, 0 errors
+compiling timer_if.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/timer_if.c: 1 warning, 0 errors
+compiling subghz.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/subghz.c: 1 warning, 0 errors
+compiling stm32wlxx_it.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/stm32wlxx_it.c: 1 warning, 0 errors
+compiling sys_app.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/sys_app.c: 1 warning, 0 errors
+compiling usart.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/usart.c: 1 warning, 0 errors
+assembling startup_stm32wl55xx_cm4.s...
+compiling sys_debug.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/sys_debug.c: 1 warning, 0 errors
+compiling usart_if.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../Core/Src/usart_if.c: 1 warning, 0 errors
+compiling stm32wlxx_nucleo_radio.c...
+compiling stm32wlxx_nucleo.c...
+compiling radio_board_if.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../SubGHz_Phy/Target/radio_board_if.c: 1 warning, 0 errors
+compiling system_stm32wlxx.c...
+compiling stm32wlxx_hal_adc.c...
+compiling stm32wlxx_hal.c...
+compiling stm32wlxx_hal_adc_ex.c...
+compiling stm32wlxx_hal_cortex.c...
+compiling stm32wlxx_hal_dma_ex.c...
+compiling stm32wlxx_hal_dma.c...
+compiling stm32wlxx_hal_flash.c...
+compiling stm32wlxx_hal_exti.c...
+compiling stm32wlxx_hal_flash_ex.c...
+compiling stm32wlxx_hal_gpio.c...
+compiling stm32wlxx_hal_pwr.c...
+compiling stm32wlxx_hal_pwr_ex.c...
+compiling stm32wlxx_hal_rcc_ex.c...
+compiling stm32wlxx_hal_rcc.c...
+compiling stm32wlxx_hal_rtc.c...
+compiling stm32wlxx_hal_subghz.c...
+compiling stm32wlxx_hal_rtc_ex.c...
+compiling stm32wlxx_hal_uart.c...
+compiling stm32wlxx_hal_uart_ex.c...
+compiling stm32wlxx_hal_cryp_ex.c...
+compiling stm32wlxx_hal_cryp.c...
+compiling stm32wlxx_hal_rng_ex.c...
+compiling stm32wlxx_hal_rng.c...
+compiling stm32_adv_trace.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/trace/adv_trace/stm32_adv_trace.c: 1 warning, 0 errors
+compiling stm32_lpm.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/lpm/tiny_lpm/stm32_lpm.c: 1 warning, 0 errors
+compiling stm32_mem.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/misc/stm32_mem.c: 2 warnings, 0 errors
+compiling stm32_seq.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/sequencer/stm32_seq.c: 1 warning, 0 errors
+compiling stm32_systime.c...
+compiling stm32_timer.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Utilities/timer/stm32_timer.c: 1 warning, 0 errors
+compiling stm32_tiny_vsnprintf.c...
+compiling radio.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio.c: 1 warning, 0 errors
+compiling radio_driver.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+../../../../../../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.c: 1 warning, 0 errors
+compiling smartfram_JoinNetwork.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_JoinNetwork.c(51): warning:  #177-D: variable "JoinRequetst"  was declared but never referenced
+  	joinRequetstMsg_t* JoinRequetst;
+..\..\..\..\..\..\Smartfram\smartfram_JoinNetwork.c(80): warning:  #177-D: variable "JoinConfirm"  was declared but never referenced
+  	joinConfirmMsg_t* JoinConfirm;
+..\..\..\..\..\..\Smartfram\smartfram_JoinNetwork.c(115): warning:  #177-D: variable "JoinConfirm"  was declared but never referenced
+  	joinConfirmMsg_t* JoinConfirm;
+..\..\..\..\..\..\Smartfram\smartfram_JoinNetwork.c(156): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\..\..\..\Smartfram\smartfram_JoinNetwork.c: 5 warnings, 0 errors
+compiling smartfram_encryptionAES.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_encryptionAES.c(134): warning:  #177-D: variable "SizeArray2"  was declared but never referenced
+    uint8_t SizeArray = 0, SizeArray2 = 0 ;
+..\..\..\..\..\..\Smartfram\smartfram_encryptionAES.c(476): warning:  #177-D: function "SerialDebug"  was declared but never referenced
+  static void SerialDebug(uint8_t* DataIn, uint8_t Length, char* Info)
+..\..\..\..\..\..\Smartfram\smartfram_encryptionAES.c: 3 warnings, 0 errors
+compiling smartfram_FlashSys.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(52): warning:  #177-D: variable "tt"  was declared but never referenced
+  	uint8_t tt;
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(444): warning:  #177-D: variable "TempData"  was declared but never referenced
+  	uint32_t TempData;
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(33): warning:  #177-D: function "FS_FlashGetway_UpdateModeRun"  was declared but never referenced
+  static void FS_FlashGetway_UpdateModeRun(void);
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(180): warning:  #177-D: function "FS_FlashGetway_InitGetway"  was declared but never referenced
+  static void FS_FlashGetway_InitGetway(void)
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(200): warning:  #177-D: function "FS_FlashGetway_InitUnicastAndGetwayKey"  was declared but never referenced
+  static void FS_FlashGetway_InitUnicastAndGetwayKey(void)
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c(212): warning:  #177-D: function "FS_FlashGetway_DebugPage"  was declared but never referenced
+  static void FS_FlashGetway_DebugPage()
+..\..\..\..\..\..\Smartfram\smartfram_FlashSys.c: 7 warnings, 0 errors
 compiling smartfram_Messeger.c...
-compiling smartfram_SysInit.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_Messeger.c(33): warning:  #177-D: variable "BufferCounter"  was declared but never referenced
+    uint8_t BufferCounter;
+..\..\..\..\..\..\Smartfram\smartfram_Messeger.c(78): warning:  #177-D: variable "BufferCounter"  was declared but never referenced
+    uint8_t BufferCounter;
+..\..\..\..\..\..\Smartfram\smartfram_Messeger.c(234): warning:  #68-D: integer conversion resulted in a change of sign
+  			*Data2 = DataTemp.Data_Out*(-1);
+..\..\..\..\..\..\Smartfram\smartfram_Messeger.c: 4 warnings, 0 errors
 compiling smartfram_command.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_command.c(48): warning:  #1295-D: Deprecated declaration FS_Command_MsgProcessing - give arg types
+  void FS_Command_MsgProcessing();
+..\..\..\..\..\..\Smartfram\smartfram_command.c(159): warning:  #177-D: variable "TempCheckSum"  was declared but never referenced
+  	uint8_t TempCheckSum = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(193): warning:  #177-D: variable "TempCheckSum"  was declared but never referenced
+  	uint8_t TempCheckSum = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(222): warning:  #177-D: variable "TempCheckSum"  was declared but never referenced
+  	uint8_t TempCheckSum = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(250): warning:  #177-D: variable "TempCheckSum"  was declared but never referenced
+  	uint8_t TempCheckSum = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(253): warning:  #177-D: variable "buffer"  was declared but never referenced
+  	char buffer[30];
+..\..\..\..\..\..\Smartfram\smartfram_command.c(287): warning:  #177-D: variable "TempCheckSum"  was declared but never referenced
+  	uint8_t TempCheckSum = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(416): warning:  #177-D: variable "TempUnicast"  was declared but never referenced
+  		uint32_t TempUnicast = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(431): warning:  #177-D: variable "TempUnicast"  was declared but never referenced
+  		uint32_t TempUnicast = 0;
+..\..\..\..\..\..\Smartfram\smartfram_command.c(398): warning:  #177-D: variable "buffer_temp"  was declared but never referenced
+  	char buffer_temp[30];
+..\..\..\..\..\..\Smartfram\smartfram_command.c: 11 warnings, 0 errors
+compiling smartfram_SysInit.c...
+../../../../../../Utilities/misc/stm32_mem.h(74): warning:  #1-D: last line of file ends without a newline
+  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+..\..\..\..\..\..\Smartfram\smartfram_SysInit.c(65): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\..\..\..\Smartfram\smartfram_SysInit.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=33452 RO-data=1144 RW-data=28 ZI-data=42292  
+Program Size: Code=37812 RO-data=1332 RW-data=160 ZI-data=42040  
 FromELF: creating hex file...
-"SubGHz_Phy_PingPong\Exe\SubGHz_Phy_PingPong.axf" - 0 Error(s), 0 Warning(s).
+"SubGHz_Phy_PingPong\Exe\SubGHz_Phy_PingPong.axf" - 0 Error(s), 60 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -53,14 +254,14 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_SubGHz_Phy_PingPong
-  C:\Users\Admin\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
-  C:\Users\Admin\AppData\Local\Arm\Packs\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32WLxx\Include
+  C:\Users\nguye\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\nguye\AppData\Local\Arm\Packs\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32WLxx\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:13
+Build Time Elapsed:  00:01:55
 </pre>
 </body>
 </html>

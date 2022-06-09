@@ -608,14 +608,15 @@ ARM Macro Assembler    Page 10
   363 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP
- --depend=subghz_phy_pingpong\exe\startup_stm32wl55xx_cm4.d -osubghz_phy_pingpo
-ng\exe\startup_stm32wl55xx_cm4.o -I.\RTE\_SubGHz_Phy_PingPong -IC:\Users\Admin\
-AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -IC:\Users\Admin\App
-Data\Local\Arm\Packs\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32WLxx
-\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 52
-9" --predefine="_RTE_ SETA 1" --predefine="CORE_CM4 SETA 1" --predefine="STM32W
-L55xx SETA 1" --list=startup_stm32wl55xx_cm4.lst startup_stm32wl55xx_cm4.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --apcs=interw
+ork --depend=subghz_phy_pingpong\exe\startup_stm32wl55xx_cm4.d -osubghz_phy_pin
+gpong\exe\startup_stm32wl55xx_cm4.o -I.\RTE\_SubGHz_Phy_PingPong -IC:\Users\ngu
+ye\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -IC:\Users\nguye\
+AppData\Local\Arm\Packs\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32W
+Lxx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA
+ 536" --predefine="_RTE_ SETA 1" --predefine="CORE_CM4 SETA 1" --predefine="STM
+32WL55xx SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32wl55xx_cm4.lst 
+startup_stm32wl55xx_cm4.s
 
 
 

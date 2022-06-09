@@ -509,7 +509,7 @@ static void Sys_JoinNetwork_ReceiveMode(uint16_t TimeOut)
 			Sys_CountTime.Join_Nextwork_TimeOut = 0;
 			Sys_VarAndStt.SYS_Switch_Mode_Lora = LORA_TX_MODE;
 			Sys_VarAndStt.SYS_FSM_Status_JoinNetwork = FSM_JOIN_REQUETST_TX;
-			if(Sys_CountTime.Join_Nextwork_StopJoin >= 2)//StopJoin
+			if(Sys_CountTime.Join_Nextwork_StopJoin >= 30)//StopJoin
 			{
 				VarApp.FlagResetSoftware = 1;
 			}
