@@ -11,7 +11,7 @@
 
 static FLASH_EraseInitTypeDef EraseInitStruct;
 GetwayFlashData_t Sys_GetwayFlashArrData[MAX_ADD_DEVICE] = {0};
-
+static void FS_Flash_AutoClear(void);
 uint8_t FlagSys_CheckModeRun;
 
 uint32_t Sys_Unicast = 0;
@@ -46,6 +46,22 @@ void FS_FlashGetway_IncreaseUnicast(void);
 uint8_t FS_FlashGetway_FindPageEmpty(void);
 uint8_t FS_FlashGetway_CheckMacDevicey(uint32_t Data1, uint32_t Data2);
 
+static void FS_Flash_AutoClear(void)
+{
+	uint8_t FlagAutoClear = 0;
+	FS_FlashGetway_ReadInit();
+	if((pLocalGetwayKeyAES[0] == 0xffffffff) || (pLocalGetwayKeyAES[1] == 0xffffffff)||(pLocalGetwayKeyAES[2] == 0xffffffff) || (pLocalGetwayKeyAES[3] == 0xffffffff))
+	{
+		FlagAutoClear = 1;
+	}
+	
+	if(FlagAutoClear == 1)
+	{
+		FS_FlashGetway_InitGetway();
+		FS_FlashGetway_InitUnicastAndGetwayKey();
+	}
+}
+
 
 void smartfram_FlashEraseInit(void)
 {
@@ -54,7 +70,7 @@ void smartfram_FlashEraseInit(void)
 		FS_FlashGetway_InitGetway();
 		FS_FlashGetway_InitUnicastAndGetwayKey();
 	#endif
-	
+	FS_Flash_AutoClear();
 	FS_FlashGetway_ReadInit();
 	
 	#if FLASH_DEBUG_INIT

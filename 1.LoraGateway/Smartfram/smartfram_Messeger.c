@@ -149,8 +149,8 @@ uint8_t Smartfram_Messeger_GetDeviceToGetway(uint8_t Str_char[], uint8_t size)
 				case SENSOR_HUM_TEMP:
 					Smartfram_Command_TEMP_HUM(Data1, Data2, Pin, TempPage, '\n');
 				
-					sprintf(buffer, "Data1: %.2f -- Data2: %.2f", Data1, Data2);
-					APP_PPRINTF( "\n%s \n" , buffer);
+					//sprintf(buffer, "Data1: %.2f -- Data2: %.2f", Data1, Data2);
+					//APP_PPRINTF( "\n%s \n" , buffer);
 					#if MSG_DEBUG_GET_SENSOR
 						APP_PPRINTF( "\n|||||||(MSG DEBUG: HUM_TEMP SENSOR = %d)|||||||| \n\r", DataDec.Check);
 						APP_PPRINTF( "Unicast: %x\n", GetMsgDeviceToGetway->Unicast);

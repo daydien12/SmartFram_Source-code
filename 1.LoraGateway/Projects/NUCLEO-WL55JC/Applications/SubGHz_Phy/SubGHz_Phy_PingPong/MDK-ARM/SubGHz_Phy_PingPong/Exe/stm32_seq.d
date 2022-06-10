@@ -1,11 +1,13 @@
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Utilities/sequencer/stm32_seq.c
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Utilities/sequencer/stm32_seq.h
-subghz_phy_pingpong\exe\stm32_seq.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stdint.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../Core/Inc/utilities_conf.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Drivers/CMSIS/Include/cmsis_armcc.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Utilities/misc/stm32_mem.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../Core/Inc/utilities_conf.h
-subghz_phy_pingpong\exe\stm32_seq.o: ../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h
-subghz_phy_pingpong\exe\stm32_seq.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stdarg.h
-subghz_phy_pingpong\exe\stm32_seq.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\string.h
+subghz_phy_pingpong/exe/stm32_seq.o: \
+  ..\..\..\..\..\..\Utilities\sequencer\stm32_seq.c \
+  ..\..\..\..\..\..\Utilities\sequencer\stm32_seq.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\utilities_conf.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_mem.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_tiny_vsnprintf.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\string.h

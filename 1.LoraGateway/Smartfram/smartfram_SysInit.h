@@ -35,7 +35,7 @@ typedef enum
   FSM_JOIN_COMPLETED,
   FSM_JOIN_DONE,
 } fsmJoinNetworkGetway_t;
- 
+
 /*Value SYS --------------------------------------*/
 typedef struct
 {
@@ -59,7 +59,7 @@ enum
 };
 /*dung de chuyen sang che do bug khong gui len may tinh nhung PI*/
 #define SYS_MODE_BUG_NOT_SEND_TO_PI 0
-#define SYS_FLASH_CLEAR 0 
+#define SYS_FLASH_CLEAR 0 // xoa flash
 
 void MX_IWDG_Init(float time_out);
 void MX_IWDG_Reload(void);

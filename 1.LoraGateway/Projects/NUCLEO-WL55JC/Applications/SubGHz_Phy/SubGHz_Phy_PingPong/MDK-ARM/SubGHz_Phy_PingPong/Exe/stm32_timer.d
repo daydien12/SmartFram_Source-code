@@ -1,13 +1,15 @@
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Utilities/timer/stm32_timer.c
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Utilities/timer/stm32_timer.h
-subghz_phy_pingpong\exe\stm32_timer.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stdbool.h
-subghz_phy_pingpong\exe\stm32_timer.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stdint.h
-subghz_phy_pingpong\exe\stm32_timer.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stddef.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Drivers/CMSIS/Include/cmsis_compiler.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Drivers/CMSIS/Include/cmsis_armcc.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../Core/Inc/utilities_conf.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Utilities/misc/stm32_mem.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../Core/Inc/utilities_conf.h
-subghz_phy_pingpong\exe\stm32_timer.o: ../../../../../../Utilities/misc/stm32_tiny_vsnprintf.h
-subghz_phy_pingpong\exe\stm32_timer.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\stdarg.h
-subghz_phy_pingpong\exe\stm32_timer.o: C:\Keil_v536\ARM\ARMCC\Bin\..\include\string.h
+subghz_phy_pingpong/exe/stm32_timer.o: \
+  ..\..\..\..\..\..\Utilities\timer\stm32_timer.c \
+  ..\..\..\..\..\..\Utilities\timer\stm32_timer.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  ..\Core\Inc\utilities_conf.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_mem.h \
+  ..\..\..\..\..\..\Utilities\misc\stm32_tiny_vsnprintf.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\string.h
