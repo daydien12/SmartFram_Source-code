@@ -1,6 +1,6 @@
 subghz_phy_pingpong/exe/smartfram_command.o: \
   ..\..\..\..\..\..\Smartfram\smartfram_command.c \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\string.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\..\..\..\..\..\Smartfram\smartfram_command.h ..\Core\Inc\main.h \
   ..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal.h \
   ..\Core\Inc\stm32wlxx_hal_conf.h \
@@ -9,16 +9,16 @@ subghz_phy_pingpong/exe/smartfram_command.o: \
   ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wlxx.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wl55xx.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\core_cm4.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\system_stm32wlxx.h \
   ..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_dma.h \
   ..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_dmamux.h \
   ..\..\..\..\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_dma_ex.h \
@@ -54,7 +54,7 @@ subghz_phy_pingpong/exe/smartfram_command.o: \
   ..\..\..\..\..\..\Utilities\misc\stm32_mem.h \
   ..\Core\Inc\utilities_conf.h \
   ..\..\..\..\..\..\Utilities\misc\stm32_tiny_vsnprintf.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\..\..\..\..\..\Smartfram\smartfram_FlashSys.h \
   ..\..\..\..\..\..\Smartfram\smartfram_SysInit.h \
   ..\..\..\..\..\..\Smartfram\smartfram_structpayload.h \
@@ -65,4 +65,4 @@ subghz_phy_pingpong/exe/smartfram_command.o: \
   ..\..\..\..\..\..\Smartfram\smartfram_Messeger.h \
   ..\..\..\..\..\..\Smartfram\smartfram_SerialBUG.h \
   ..\Core\Inc\usart_if.h ..\Core\Inc\usart.h ..\Core\Inc\main.h \
-  ..\Core\Inc\dma.h C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdio.h
+  ..\Core\Inc\dma.h C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdio.h

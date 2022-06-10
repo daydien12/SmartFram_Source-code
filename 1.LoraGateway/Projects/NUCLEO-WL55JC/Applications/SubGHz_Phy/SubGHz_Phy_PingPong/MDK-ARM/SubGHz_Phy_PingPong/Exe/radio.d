@@ -1,20 +1,20 @@
 subghz_phy_pingpong/exe/radio.o: \
   ..\..\..\..\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio.c \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\math.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\SUBGHZ_PHY\Target\timer.h \
   ..\..\..\..\..\..\Utilities\timer\stm32_timer.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stddef.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\..\..\..\..\..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Core\Inc\utilities_conf.h \
   ..\..\..\..\..\..\Utilities\misc\stm32_mem.h \
   ..\..\..\..\..\..\Utilities\misc\stm32_tiny_vsnprintf.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  C:\Keil_v5_36\ARM\ARMCLANG\Bin\..\include\string.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  C:\Keil_v536\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\..\..\..\..\..\Middlewares\Third_Party\SubGHz_Phy\radio.h \
   ..\..\..\..\..\..\Middlewares\Third_Party\SubGHz_Phy\radio_ex.h \
   ..\..\..\..\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.h \
