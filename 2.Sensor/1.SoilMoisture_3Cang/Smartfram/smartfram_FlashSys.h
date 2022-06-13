@@ -26,13 +26,13 @@ typedef struct
 	uint32_t TimeWakeup;
 	uint32_t SendMiss;
 	float Calib_MIN;
-	float Calib_PAR_A;
-	float Calib_PAR_B;
+	uint32_t SensorSoilMoisture;
+	uint32_t ERROR;
 	float Calib_PAR_C;
 	uint32_t ID_Msg;
 }deviceMSGFlashData_t;
 extern deviceMSGFlashData_t Sys_DeviceFlashData_MSG;
-
+extern uint8_t vr_Sensor_ERROR;
 #define FLASH_SIZE_DATA_READ (sizeof(deviceFlashData_t))
 #define FLASH_SIZE_DATA_WRITE (FLASH_SIZE_DATA_READ/8)
 

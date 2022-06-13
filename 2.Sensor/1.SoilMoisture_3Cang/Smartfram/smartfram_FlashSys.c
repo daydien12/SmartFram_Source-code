@@ -14,7 +14,7 @@ uint8_t FlagSys_CheckModeRun;
 
 uint32_t FirstPage = 0, NbOfPages = 0;
 uint32_t Address = 0, PageError = 0;
-
+uint8_t vr_Sensor_ERROR = 0;
 static uint32_t GetPage(uint32_t Address);
 
 static void FS_FlashErase(void);
@@ -134,6 +134,8 @@ void smartfram_IncrementIdMsg(void)
 {
 	FS_FlashDevice_ReadMesseger();
 	Sys_DeviceFlashData_MSG.ID_Msg++;
+	Sys_DeviceFlashData_MSG.SensorSoilMoisture = Sys_DataSensorRead.Data_Senser_SoilMoisture;
+	Sys_DeviceFlashData_MSG.ERROR = vr_Sensor_ERROR;
 	FS_FlashDevice_WriteMesseger();
 	#if FLASH_DEBUG_INCREASE_IDMSG
 		APP_PPRINTF("\n(FLASH_BUG: Increment IdMsg: %d)\n", Sys_DeviceFlashData_MSG.ID_Msg);
@@ -240,8 +242,8 @@ void FS_FlashDevice_InitMsg(void)
 	Sys_DeviceFlashData_MSG.TimeWakeup = TIME_WAKEUP_INIT;
 	Sys_DeviceFlashData_MSG.SendMiss =  1;
 	Sys_DeviceFlashData_MSG.Calib_MIN =  0;
-	Sys_DeviceFlashData_MSG.Calib_PAR_A = 0;
-	Sys_DeviceFlashData_MSG.Calib_PAR_B = 0;
+	Sys_DeviceFlashData_MSG.SensorSoilMoisture = 0;
+	Sys_DeviceFlashData_MSG.ERROR = 0;
 	Sys_DeviceFlashData_MSG.Calib_PAR_C = 0;
 	Sys_DeviceFlashData_MSG.ID_Msg = 0;
 	FS_FlashDevice_WriteMesseger();
@@ -258,6 +260,7 @@ void FS_FlashUpdate_All(void)
 	FS_FlashUpdate_ModeRun();
 	FS_FlashUpdate_GetwayKey();
 	FS_FlashUpdate_DeviceKey();
+	vr_Sensor_ERROR = Sys_DeviceFlashData_MSG.ERROR;
 }
 
 
@@ -354,10 +357,10 @@ void FS_FlashDevice_Debug(void)
 	sprintf(buffer_temp, "%f",Sys_DeviceFlashData_MSG.Calib_MIN);
 	APP_PPRINTF("Calib_MIN: %s \n"		,buffer_temp);
 	
-	sprintf(buffer_temp, "%f",Sys_DeviceFlashData_MSG.Calib_PAR_A);
+	sprintf(buffer_temp, "%d",Sys_DeviceFlashData_MSG.SensorSoilMoisture);
 	APP_PPRINTF("Calib_PAR_A: %s \n"	,buffer_temp);
 	
-	sprintf(buffer_temp, "%f",Sys_DeviceFlashData_MSG.Calib_PAR_B);
+	sprintf(buffer_temp, "%d",Sys_DeviceFlashData_MSG.ERROR);
 	APP_PPRINTF("Calib_PAR_B: %s \n"	,buffer_temp);
 	
 	sprintf(buffer_temp, "%f",Sys_DeviceFlashData_MSG.Calib_PAR_C);
@@ -439,8 +442,8 @@ void FS_FlashDevice_ReadMesseger(void)
 	Sys_DeviceFlashData_MSG.TimeWakeup 	= TempData->TimeWakeup;
 	Sys_DeviceFlashData_MSG.SendMiss 		= TempData->SendMiss;
 	Sys_DeviceFlashData_MSG.Calib_MIN 	= TempData->Calib_MIN;
-	Sys_DeviceFlashData_MSG.Calib_PAR_A = TempData->Calib_PAR_A;
-	Sys_DeviceFlashData_MSG.Calib_PAR_B = TempData->Calib_PAR_B;
+	Sys_DeviceFlashData_MSG.SensorSoilMoisture = TempData->SensorSoilMoisture;
+	Sys_DeviceFlashData_MSG.ERROR = TempData->ERROR;
 	Sys_DeviceFlashData_MSG.Calib_PAR_C = TempData->Calib_PAR_C;
 	Sys_DeviceFlashData_MSG.ID_Msg 			= TempData->ID_Msg;
 }

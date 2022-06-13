@@ -184,7 +184,7 @@ void SubghzApp_Init(void)
   UTIL_SEQ_RegTask((1 << CFG_SEQ_Task_MessageTransmission), UTIL_SEQ_RFU, MessageTransmission_Process);
 #endif
 	MX_IWDG_Init(3);
-	APP_PPRINTF( "\n|||||||(RS)||||||||\n");
+	APP_PPRINTF("RS");
 }
 
 

@@ -32,6 +32,7 @@ extern "C" {
 #define MSG_DEBUG_GET_CHECK_COUNT_IDMSG 0
 /*DEBUG smartfram_Messeger LIBRARY*/
 #define COMMAND_DEBUG_GET_DATA_PI 0
+#define COMMAND_DEBUG_SYS 0
 #ifdef __cplusplus
 }
 #endif
