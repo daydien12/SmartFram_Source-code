@@ -82,6 +82,8 @@ void FS_TimeDebug()
 	APP_PPRINTF("ModeRun: %x \n", Sys_DeviceFlashData.ModeRun);
 	APP_PPRINTF("TypeSensor: %x \n", Sys_DeviceFlashData.TypeSensor);
 	APP_PPRINTF("Unicast: %d \n", Sys_DeviceFlashData.Unicast);
+	APP_PPRINTF("ERROR %d \n",Sys_DeviceFlashData_MSG.ERROR);
+	APP_PPRINTF("SensorSoilMoisture: %d \n"	, Sys_DeviceFlashData_MSG.SensorSoilMoisture);
 	APP_PPRINTF("SendMiss: %d \n"		,Sys_DeviceFlashData_MSG.SendMiss);
 	APP_PPRINTF("TimeWakeup: %d \n"	, Sys_DeviceFlashData_MSG.TimeWakeup);
 	APP_PPRINTF("Random: %d\n\r", TimeRandom);

@@ -651,16 +651,17 @@ static void FS_ReadSensor(void)
 			if(((SumTemp < 5)&&(SumHum < 30))||(VarApp.CountStopReadCheckSensor >= 2))
 			{
 				VarApp.FlagStartReadSensor = 0;
-				if(VarApp.CountStopReadCheckSensor >= 3)
+				if(VarApp.CountStopReadCheckSensor >= 2)
 				{
 					
 					Sys_DataSensorRead.Data_Senser_Temperature 	= Sys_DeviceFlashData_MSG.Temperature;
 					Sys_DataSensorRead.Data_Senser_Humidity 		=  Sys_DeviceFlashData_MSG.Humidity;
+					vr_Sensor_ERROR++;
 					if(vr_Sensor_ERROR >= 5)
 					{
 						Sys_DataSensorRead.Data_Senser_Temperature 	= 0;
 						Sys_DataSensorRead.Data_Senser_Humidity 		= 1;
-						vr_Sensor_ERROR++;
+						vr_Sensor_ERROR = 0;
 					}
 				}
 				else
@@ -676,6 +677,7 @@ static void FS_ReadSensor(void)
 		}
 		else
 		{
+			vr_Sensor_ERROR = 0;
 			VarApp.FlagStartReadSensor = 0;
 			FS_StartSendMsg();
 		}

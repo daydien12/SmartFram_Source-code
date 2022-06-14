@@ -20,7 +20,7 @@ void Smartfram_Messeger_SendDeviceToGetway(void(*RadioSend)(uint8_t *str, uint8_
   SendMsgDeviceToGetway.TypeMsg = 0x05;
   SendMsgDeviceToGetway.Crc = 0x55;
   SendMsgDeviceToGetway.Unicast = Sys_DeviceFlashData.Unicast;
-	
+	Smartfram_SYS_DebugSensor(1);
 	#if MSG_DEBUG_SEND_ID_MSG
 	 APP_PPRINTF( "\n|||||||(MSG DEBUG: IdMsg: %d)|||||||| \n\r", Sys_DeviceFlashData_MSG.ID_Msg);
 	#endif

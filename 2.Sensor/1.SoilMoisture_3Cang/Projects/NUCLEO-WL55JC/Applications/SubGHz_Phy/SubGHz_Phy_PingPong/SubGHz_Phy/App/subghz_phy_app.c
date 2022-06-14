@@ -249,30 +249,56 @@ void SubghzApp_Init(void)
 #if APP_TASK_TEST
 static void JoinNetworkTask_Process(void)
 {
-	
+	uint32_t Temp_SoilMoisture,  SumTemp_SoilMoisture;
 	if(VarApp.FlagStartReadSensor == 1)
 	{
-		if(VarApp.CountStartReadSensor >= 2 )
+		SmartFram_SYS_ReadAllSensor();
+		if(Sys_DataSensorRead.Data_Senser_SoilMoisture == 0)
 		{
-		
-			VarApp.CountStartReadSensor = 0;
-			SmartFram_SYS_ReadAllSensor();
-			if((Sys_DataSensorRead.Data_Senser_SoilMoisture !=0)||(VarApp.CountStopReadCheckSensor >= 3))
+			Temp_SoilMoisture = Sys_DataSensorRead.Data_Senser_SoilMoisture;
+			if(Temp_SoilMoisture > Sys_DeviceFlashData_MSG.SensorSoilMoisture)
+			{
+				SumTemp_SoilMoisture = Temp_SoilMoisture - Sys_DeviceFlashData_MSG.SensorSoilMoisture;
+			}
+			else
+			{
+				SumTemp_SoilMoisture = Sys_DeviceFlashData_MSG.SensorSoilMoisture - Temp_SoilMoisture;
+			}
+			
+			if((SumTemp_SoilMoisture < 5)||(VarApp.CountStopReadCheckSensor >= 3))
 			{
 				VarApp.FlagStartReadSensor = 0;
+				if(VarApp.CountStopReadCheckSensor >= 3)
+				{
+					
+					Sys_DataSensorRead.Data_Senser_SoilMoisture = Sys_DeviceFlashData_MSG.SensorSoilMoisture;
+					vr_Sensor_ERROR++;
+					if(vr_Sensor_ERROR >= 5)
+					{
+						Sys_DataSensorRead.Data_Senser_SoilMoisture = 0;
+					}
+				}
+				else
+				{
+					vr_Sensor_ERROR = 0;
+				}
 				FS_StartSendMsg();
 			}
 			else
 			{
-					VarApp.CountStopReadCheckSensor++;
+				VarApp.CountStopReadCheckSensor++;
 			}
+			
 		}
-		VarApp.CountStartReadSensor++;
+		else
+		{
+			vr_Sensor_ERROR = 0;
+			VarApp.FlagStartReadSensor = 0;
+			FS_StartSendMsg();
+		}
 	}
-	
 	//SmartFram_SYS_ReadAllSensor();
 	//Smartfram_SYS_DebugSensor(1);
-
 }
 #endif
 

@@ -154,6 +154,7 @@ static void CMD_GetChar(uint8_t *rxChar, uint16_t size, uint8_t error)
 
 void Smartfram_Command_ScanACK(uint32_t MAC1, uint32_t MAC2, uint32_t Unicast, uint8_t TypeSensor,uint8_t KeyWordEnd)
 {
+	char buffer[100];
 	uint8_t i;
 	uint8_t *Temp;
 	uint8_t TempCheckSum = 0;
@@ -188,8 +189,9 @@ void Smartfram_Command_ScanACK(uint32_t MAC1, uint32_t MAC2, uint32_t Unicast, u
 
 void Smartfram_Command_LIGHT(uint32_t Data, uint8_t Pin,uint8_t Page, uint8_t KeyWordEnd)
 {
+	char buffer[100];
 	uint8_t i;
-	uint8_t *Temp;
+	uint8_t *Temp, arr_temp[14];
 	uint8_t TempCheckSum = 0;
 	commandSensorLight_t LightComman ={0};
 	
@@ -212,13 +214,27 @@ void Smartfram_Command_LIGHT(uint32_t Data, uint8_t Pin,uint8_t Page, uint8_t Ke
 	LightComman.Checksum = FS_Command_CreateChecksum((uint8_t*)&LightComman, SIZE_CREATE_CHECKSUM(commandSensorLight_t));
 	LightComman.KeyWordEnd1 = 0x09;
 	LightComman.KeyWordEnd2 = KeyWordEnd;
-	vcom_Trace((uint8_t*)&LightComman,sizeof(commandSensorLight_t));
+	Temp = (uint8_t*)&LightComman;
+	for(i=0; i < sizeof(commandSensorLight_t); i++)
+	{
+		arr_temp[i] = Temp[i];
+	}
+	if((arr_temp[0] == 0xaa)&&(arr_temp[12] == 0x09)&&(arr_temp[13] == 0x0a))
+	{
+		#if COMMAND_DEBUG_SYS
+		sprintf(buffer, "%x %x %x %x %x %x %x %x %x %x %x %x %x %x",arr_temp[0],arr_temp[1],arr_temp[2],arr_temp[3],arr_temp[4],arr_temp[5],arr_temp[6],arr_temp[7],arr_temp[8],arr_temp[9],arr_temp[10],arr_temp[11],arr_temp[12],arr_temp[13]);
+		APP_PPRINTF( "%s \n" , buffer);
+		HAL_Delay(100);
+		#endif
+		vcom_Trace(arr_temp,sizeof(commandSensorLight_t));
+	}
 }
 
 void Smartfram_Command_SoilMoisture(uint32_t Data, uint8_t Pin, uint8_t Page, uint8_t KeyWordEnd)
 {
+	char buffer[100];
 	uint8_t i;
-	uint8_t *Temp;
+	uint8_t *Temp,arr_temp[14];
 	uint8_t TempCheckSum = 0;
 	commandSensorSoilMoisture_t LightComman ={0};
 	
@@ -240,17 +256,30 @@ void Smartfram_Command_SoilMoisture(uint32_t Data, uint8_t Pin, uint8_t Page, ui
 	LightComman.Checksum = FS_Command_CreateChecksum((uint8_t*)&LightComman, SIZE_CREATE_CHECKSUM(commandSensorSoilMoisture_t));
 	LightComman.KeyWordEnd1 = 0x09;
 	LightComman.KeyWordEnd2 = KeyWordEnd;
-	vcom_Trace((uint8_t*)&LightComman,sizeof(commandSensorLight_t));
+	Temp = (uint8_t*)&LightComman;
+	for(i=0; i < sizeof(commandSensorLight_t); i++)
+	{
+		arr_temp[i] = Temp[i];
+	}
+	if((arr_temp[0] == 0xaa)&&(arr_temp[12] == 0x09)&&(arr_temp[13] == 0x0a))
+	{
+		#if COMMAND_DEBUG_SYS
+		sprintf(buffer, "%x %x %x %x %x %x %x %x %x %x %x %x %x %x",arr_temp[0],arr_temp[1],arr_temp[2],arr_temp[3],arr_temp[4],arr_temp[5],arr_temp[6],arr_temp[7],arr_temp[8],arr_temp[9],arr_temp[10],arr_temp[11],arr_temp[12],arr_temp[13]);
+		APP_PPRINTF( "%s \n" , buffer);
+		HAL_Delay(100);
+		#endif
+		vcom_Trace(arr_temp,sizeof(commandSensorLight_t));
+	}
 }
 
 void Smartfram_Command_TEMP_HUM(float DataTemp, float DataHum, uint8_t Pin, uint8_t Page, uint8_t KeyWordEnd)
 {
+	char buffer[100];
 	uint8_t i;
-	uint8_t *Temp;
+	uint8_t *Temp,arr_temp[18];
 	uint8_t TempCheckSum = 0;
 	commandSensorHumTemp_t TempHumComman = {0};
 	floatToU8_u TempData;
-	char buffer[30];
 	TempHumComman.Header = HEADER;
 	TempHumComman.TypeMsg = 0x06;
 	
@@ -276,12 +305,26 @@ void Smartfram_Command_TEMP_HUM(float DataTemp, float DataHum, uint8_t Pin, uint
 	TempHumComman.Checksum = FS_Command_CreateChecksum((uint8_t*)&TempHumComman, SIZE_CREATE_CHECKSUM(commandSensorHumTemp_t));
 	TempHumComman.KeyWordEnd1 = 0x09;
 	TempHumComman.KeyWordEnd2 = KeyWordEnd;
-	vcom_Trace((uint8_t*)&TempHumComman,sizeof(commandSensorHumTemp_t));
+	Temp = (uint8_t*)&TempHumComman;
+	for(i=0; i < sizeof(commandSensorHumTemp_t); i++)
+	{
+		arr_temp[i] = Temp[i];
+	}
+	if((arr_temp[0] == 0xaa)&&(arr_temp[16] == 0x09)&&(arr_temp[17] == 0x0a))
+	{
+		#if COMMAND_DEBUG_SYS
+		sprintf(buffer, "%x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x",arr_temp[0], arr_temp[1],arr_temp[2],arr_temp[3],arr_temp[4],arr_temp[5],arr_temp[6],arr_temp[7],arr_temp[8],arr_temp[9],arr_temp[10],arr_temp[11],arr_temp[12],arr_temp[13],arr_temp[14],arr_temp[15],arr_temp[16],arr_temp[17]);
+		APP_PPRINTF( "%s \n" , buffer);
+		HAL_Delay(100);
+		#endif
+		vcom_Trace(arr_temp,sizeof(commandSensorHumTemp_t));
+	}
 	
 }
 
 void Smartfram_Command_CCS811(uint32_t DataCO2, uint32_t DataTVOC, uint8_t Pin, uint8_t Page, uint8_t KeyWordEnd)
 {
+	char buffer[100];
 	uint8_t i;
 	uint8_t *Temp;
 	uint8_t TempCheckSum = 0;
@@ -312,6 +355,10 @@ void Smartfram_Command_CCS811(uint32_t DataCO2, uint32_t DataTVOC, uint8_t Pin, 
 	TempCSS811Comman.Checksum = FS_Command_CreateChecksum((uint8_t*)&TempCSS811Comman, SIZE_CREATE_CHECKSUM(TempCSS811Comman));
 	TempCSS811Comman.KeyWordEnd1 = 0x09;
 	TempCSS811Comman.KeyWordEnd2 = KeyWordEnd;
+	#if COMMAND_DEBUG_SYS
+	Temp = (uint8_t*)&TempCSS811Comman;
+	HAL_Delay(100);
+	#endif
 	vcom_Trace((uint8_t*)&TempCSS811Comman,sizeof(TempCSS811Comman));
 }
 

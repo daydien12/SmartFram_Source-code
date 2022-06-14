@@ -7,6 +7,8 @@
 #include "usart_if.h"
 #include "smartfram_command.h"
 
+#define DEBUG_DATA_SENSOR 0
+
 #define DEBUG_MESSEGER 0
 #define ACK 0x5A
 #define ACK_REMOVE 0xF0
@@ -77,7 +79,7 @@ uint8_t Smartfram_Messeger_GetDeviceToGetway(uint8_t Str_char[], uint8_t size)
   decrypted_t DataDec;
   uint8_t BufferCounter;
   uint8_t TempPage;
-  char buffer[30];
+  char buffer[100];
 	uint8_t Pin = 0, Ack = 0;
 	uint32_t IdMsg = 0;
 	float	Data1 = 0, Data2 = 0;
@@ -117,6 +119,9 @@ uint8_t Smartfram_Messeger_GetDeviceToGetway(uint8_t Str_char[], uint8_t size)
 			{
 				case SENSOR_LIGHT:
 					Smartfram_Command_LIGHT((uint32_t)Data1, Pin, TempPage,'\n');
+					#if DEBUG_DATA_SENSOR
+					APP_PPRINTF("Uni:%d LIGHT: %d Pin:%d IdMsg:%d \n", GetMsgDeviceToGetway->Unicast,(uint32_t)Data1, Pin, Sys_ArrIDMsg[TempPage]);
+					#endif
 					#if MSG_DEBUG_GET_SENSOR
 					APP_PPRINTF("\n|||||||(MSG DEBUG: LIGHT SENSOR = %d)|||||||| \n", DataDec.Check);
 					APP_PPRINTF("Unicast: %x\n",GetMsgDeviceToGetway->Unicast);
@@ -148,11 +153,12 @@ uint8_t Smartfram_Messeger_GetDeviceToGetway(uint8_t Str_char[], uint8_t size)
 
 				case SENSOR_HUM_TEMP:
 					Smartfram_Command_TEMP_HUM(Data1, Data2, Pin, TempPage, '\n');
-				
-					//sprintf(buffer, "Data1: %.2f -- Data2: %.2f", Data1, Data2);
-					//APP_PPRINTF( "\n%s \n" , buffer);
+					#if DEBUG_DATA_SENSOR
+					sprintf(buffer, "Uni:%d Data1:%.2f Data2:%.2f Pin:%d IdMsg:%d",GetMsgDeviceToGetway->Unicast, Data1/10.0, Data2/10.0,Pin, Sys_ArrIDMsg[TempPage]);
+					APP_PPRINTF( "%s \n" , buffer);
+					#endif
 					#if MSG_DEBUG_GET_SENSOR
-						APP_PPRINTF( "\n|||||||(MSG DEBUG: HUM_TEMP SENSOR = %d)|||||||| \n\r", DataDec.Check);
+						//APP_PPRINTF( "\n|||||||(MSG DEBUG: HUM_TEMP SENSOR = %d)|||||||| \n\r", DataDec.Check);
 						APP_PPRINTF( "Unicast: %x\n", GetMsgDeviceToGetway->Unicast);
 						APP_PPRINTF( "ACK:     %x \n" , Ack);
 				
@@ -164,13 +170,16 @@ uint8_t Smartfram_Messeger_GetDeviceToGetway(uint8_t Str_char[], uint8_t size)
 				
 						APP_PPRINTF( "PIN: %d \n" , Pin);
 						APP_PPRINTF( "IdMsg: %d\n\r", Sys_ArrIDMsg[TempPage]);
-						APP_PPRINTF("\n smartfram_FindUnicast: %d\n", TempPage);
-						APP_PPRINTF( "\n---------------- \n\r");
+						//APP_PPRINTF("\n smartfram_FindUnicast: %d\n", TempPage);
+						//APP_PPRINTF( "\n---------------- \n\r");
 					#endif
 					break;
 
 				case SENSOR_SOIL_MOISTURE:
 					Smartfram_Command_SoilMoisture((uint32_t)Data1, Pin, TempPage,'\n');
+					#if DEBUG_DATA_SENSOR
+					APP_PPRINTF("Uni:%d ADC: %d Pin:%d IdMsg:%d \n", GetMsgDeviceToGetway->Unicast,(uint32_t)Data1, Pin, Sys_ArrIDMsg[TempPage]);
+					#endif
 					#if MSG_DEBUG_GET_SENSOR
 						APP_PPRINTF( "\n|||||||(CMSG DEBUG: SOIL_MOISTURE SENSOR = %d)|||||||| \n\r", DataDec.Check);
 						APP_PPRINTF( "Unicast: %x\n\r",GetMsgDeviceToGetway->Unicast);
