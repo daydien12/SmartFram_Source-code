@@ -72,6 +72,8 @@ typedef struct
 	
 	uint8_t FlagStartSend;
 	uint8_t CountStartSend;
+	
+	uint8_t FlagModesend;
 }appVar_t;
 
 appVar_t VarApp;
@@ -305,7 +307,8 @@ static void JoinNetworkTask_Process(void)
 			//FS_StartSendMsg();
 		}
 	}
-	if(VarApp.FlagStartSend == 1)
+	
+	if(VarApp.FlagStartSend == 1 && VarApp.FlagModesend==1)
 	{
 		if(VarApp.CountStartSend >= 5)
 		{
@@ -317,6 +320,11 @@ static void JoinNetworkTask_Process(void)
 		{
 			VarApp.CountStartSend++;
 		}
+	}
+	else if(VarApp.FlagStartSend == 1 && VarApp.FlagModesend == 2)
+	{
+		FS_StartSendMsg();
+		VarApp.FlagStartSend = 0;
 	}
 	//SmartFram_SYS_ReadAllSensor();
 	//Smartfram_SYS_DebugSensor(1);
@@ -530,6 +538,7 @@ static void TimeObjectFS_ReadButton(void *context)
 		VarApp.FlagStartReadSensor = 1;
 		GPIO_ValueStatus.Flag_SendMesseger = 0;
 		VarApp.FlagAutoReset = 1;
+		VarApp.FlagModesend  = 1;
 	}
 	
 	if(SYS_TimeCountALL.TimeWakeup == 1)
@@ -538,6 +547,7 @@ static void TimeObjectFS_ReadButton(void *context)
 		HAL_GPIO_WritePin(SYS_LED1_GPIO_PORT,SYS_LED1_PIN,1);
 		SYS_TimeCountALL.TimeWakeup = 0;
 		VarApp.FlagAutoReset = 1;
+		VarApp.FlagModesend  = 2;
 	}
 	
 	if(GPIO_ValueStatus.vruc_StopAll == 1)
@@ -602,8 +612,9 @@ static void FS_VarAppInit(void)
 	VarApp.CountStopReadCheckSensor				 = 0;
 	VarApp.CountAutoReset									 = 0;
 	VarApp.FlagAutoReset 									 = 0;
-	VarApp.FlagStartSend 									   = 0;
-	VarApp.CountStartSend 								  = 0;
+	VarApp.FlagStartSend 									 = 0;
+	VarApp.CountStartSend 								 = 0;
+	VarApp.FlagModesend                    = 0;
 	SYS_TimeCountALL.TimeWakeup            = 0;
 	SYS_TimeCountALL.CounterWakeUp_1Second = 0;
 	SYS_TimeCountALL.FlagRandom_Time       = 0;
@@ -687,7 +698,7 @@ static void FS_ResetSoftware(void)
 {
 	if(VarApp.FlagResetSoftware == 1)
 	{
-		if(VarApp.CountResetSoftware >= 5)
+		if(VarApp.CountResetSoftware >= 0)
 		{
 				NVIC_SystemReset();
 		}
