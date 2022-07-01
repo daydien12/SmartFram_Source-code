@@ -69,6 +69,9 @@ typedef struct
 	
 	uint8_t FlagAutoReset;
 	uint32_t CountAutoReset;
+	
+	uint8_t FlagStartSend;
+	uint8_t CountStartSend;
 }appVar_t;
 
 appVar_t VarApp;
@@ -285,7 +288,8 @@ static void JoinNetworkTask_Process(void)
 				{
 					vr_Sensor_ERROR = 0;
 				}
-				FS_StartSendMsg();
+				VarApp.FlagStartSend = 1;
+				//FS_StartSendMsg();
 			}
 			else
 			{
@@ -297,7 +301,21 @@ static void JoinNetworkTask_Process(void)
 		{
 			vr_Sensor_ERROR = 0;
 			VarApp.FlagStartReadSensor = 0;
+			VarApp.FlagStartSend = 1;
+			//FS_StartSendMsg();
+		}
+	}
+	if(VarApp.FlagStartSend == 1)
+	{
+		if(VarApp.CountStartSend >= 5)
+		{
 			FS_StartSendMsg();
+			VarApp.FlagStartSend = 0;
+			VarApp.CountStartSend = 0;
+		}
+		else
+		{
+			VarApp.CountStartSend++;
 		}
 	}
 	//SmartFram_SYS_ReadAllSensor();
@@ -584,6 +602,8 @@ static void FS_VarAppInit(void)
 	VarApp.CountStopReadCheckSensor				 = 0;
 	VarApp.CountAutoReset									 = 0;
 	VarApp.FlagAutoReset 									 = 0;
+	VarApp.FlagStartSend 									   = 0;
+	VarApp.CountStartSend 								  = 0;
 	SYS_TimeCountALL.TimeWakeup            = 0;
 	SYS_TimeCountALL.CounterWakeUp_1Second = 0;
 	SYS_TimeCountALL.FlagRandom_Time       = 0;
