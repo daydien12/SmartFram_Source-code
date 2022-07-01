@@ -66,6 +66,12 @@ typedef struct
 	uint8_t CountStartReadSensor;
 	
 	uint8_t CountStopReadCheckSensor;
+	
+	uint8_t FlagAutoReset;
+	uint32_t CountAutoReset;
+	
+	uint8_t FlagStartSend;
+	uint8_t CountStartSend;
 }appVar_t;
 
 appVar_t VarApp;
@@ -282,7 +288,8 @@ static void JoinNetworkTask_Process(void)
 				{
 					vr_Sensor_ERROR = 0;
 				}
-				FS_StartSendMsg();
+				VarApp.FlagStartSend = 1;
+				//FS_StartSendMsg();
 			}
 			else
 			{
@@ -294,7 +301,21 @@ static void JoinNetworkTask_Process(void)
 		{
 			vr_Sensor_ERROR = 0;
 			VarApp.FlagStartReadSensor = 0;
+			VarApp.FlagStartSend = 1;
+			//FS_StartSendMsg();
+		}
+	}
+	if(VarApp.FlagStartSend == 1)
+	{
+		if(VarApp.CountStartSend >= 5)
+		{
 			FS_StartSendMsg();
+			VarApp.FlagStartSend = 0;
+			VarApp.CountStartSend = 0;
+		}
+		else
+		{
+			VarApp.CountStartSend++;
 		}
 	}
 	//SmartFram_SYS_ReadAllSensor();
@@ -508,6 +529,7 @@ static void TimeObjectFS_ReadButton(void *context)
 	{
 		VarApp.FlagStartReadSensor = 1;
 		GPIO_ValueStatus.Flag_SendMesseger = 0;
+		VarApp.FlagAutoReset = 1;
 	}
 	
 	if(SYS_TimeCountALL.TimeWakeup == 1)
@@ -515,6 +537,7 @@ static void TimeObjectFS_ReadButton(void *context)
 		VarApp.FlagStartReadSensor = 1;
 		HAL_GPIO_WritePin(SYS_LED1_GPIO_PORT,SYS_LED1_PIN,1);
 		SYS_TimeCountALL.TimeWakeup = 0;
+		VarApp.FlagAutoReset = 1;
 	}
 	
 	if(GPIO_ValueStatus.vruc_StopAll == 1)
@@ -522,6 +545,14 @@ static void TimeObjectFS_ReadButton(void *context)
 		VarApp.FlagSendMsg = 0;
 		VarApp.CountWainSendMsg = 0;
 		GPIO_ValueStatus.vruc_StopAll = 0;
+	}
+	if(VarApp.FlagAutoReset)
+	{
+		VarApp.CountAutoReset++;
+		if(VarApp.CountAutoReset >= 20)
+		{
+			FS_EndSendMsg();
+		}
 	}
 	
 	FS_ResetSoftware();
@@ -569,6 +600,10 @@ static void FS_VarAppInit(void)
 	VarApp.FlagStartReadSensor             = 0;
 	VarApp.CountStartReadSensor            = 0;
 	VarApp.CountStopReadCheckSensor				 = 0;
+	VarApp.CountAutoReset									 = 0;
+	VarApp.FlagAutoReset 									 = 0;
+	VarApp.FlagStartSend 									   = 0;
+	VarApp.CountStartSend 								  = 0;
 	SYS_TimeCountALL.TimeWakeup            = 0;
 	SYS_TimeCountALL.CounterWakeUp_1Second = 0;
 	SYS_TimeCountALL.FlagRandom_Time       = 0;
