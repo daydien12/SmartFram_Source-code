@@ -698,7 +698,7 @@ static void FS_ResetSoftware(void)
 {
 	if(VarApp.FlagResetSoftware == 1)
 	{
-		if(VarApp.CountResetSoftware >= 5)
+		if(VarApp.CountResetSoftware >= 0)
 		{
 				NVIC_SystemReset();
 		}
